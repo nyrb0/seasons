@@ -1,0 +1,15 @@
+@import 'tailwindcss';
+
+body {
+    background-color: #ffff;
+    color: #ffff;
+    color: var(--gray);
+    font-weight: 600;
+    font-family: var(--font-family);
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

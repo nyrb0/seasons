@@ -1,0 +1,160 @@
+.space {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 160px;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.orbitSvg {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    transform: rotate(-90deg);
+}
+
+.orbitPath {
+    fill: none;
+    stroke: white;
+    stroke-width: 2;
+    stroke-dasharray: 690;
+    stroke-dashoffset: 690;
+    animation: drawOrbit 8s linear infinite;
+}
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 220px;
+    height: 220px;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+}
+.earthAnimation {
+    animation: rotate 8s linear infinite;
+}
+
+.earth {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    width: 32px;
+}
+.earthScaleUp {
+    transform: scale(1.5);
+    transition: transform 1s ease;
+}
+.winter,
+.spring,
+.autumn,
+.summer {
+    position: absolute;
+    z-index: 9999;
+    left: 50px;
+    top: 50px;
+    scale: 1.1;
+}
+
+.january,
+.february,
+.march,
+.april,
+.may,
+.june,
+.july,
+.august,
+.september,
+.october,
+.november,
+.december {
+    position: absolute;
+    scale: 0.8;
+}
+.january {
+    top: -21px;
+    right: 99px;
+    rotate: -16deg;
+}
+.february {
+    top: 24px;
+    right: 18px;
+    rotate: 17deg;
+}
+.march {
+    top: 108px;
+    right: -32px;
+    rotate: 48deg;
+}
+.april {
+    top: 202px;
+    right: -33px;
+    rotate: 76deg;
+}
+.may {
+    top: 284px;
+    right: 17px;
+    rotate: 108deg;
+}
+.june {
+    top: 330px;
+    right: 99px;
+    rotate: 137deg;
+}
+.july {
+    top: 329px;
+    right: 191px;
+    rotate: 168deg;
+}
+.august {
+    top: 280px;
+    right: 274px;
+    rotate: 199deg;
+}
+.september {
+    top: 197px;
+    right: 319px;
+    rotate: 230deg;
+}
+.october {
+    top: 104px;
+    right: 316px;
+    rotate: 259deg;
+}
+.november {
+    top: 23px;
+    right: 267px;
+    rotate: 290deg;
+}
+
+.december {
+    top: -21px;
+    right: 188px;
+    rotate: 317deg;
+}
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes drawOrbit {
+    from {
+        stroke-dashoffset: 690;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
